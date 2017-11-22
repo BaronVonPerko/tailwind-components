@@ -1,0 +1,7 @@
+a {
+    @apply .inline-block .align-baseline .font-bold .text-sm .text-blue;
+
+    &:hover {
+        @apply .text-blue-darker;
+    }
+}

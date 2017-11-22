@@ -1,95 +1,77 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
+@section('content')
+    <div class="container px-4 mx-auto text-center">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <button class="btn btn-primary">
+            Button
+        </button>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+        <button class="btn btn-normal">
+            Normal
+        </button>
 
-            .full-height {
-                height: 100vh;
-            }
+        <button class="btn btn-danger">
+            Danger
+        </button>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    </div>
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+    <div class="container w-full max-w-xs mx-auto my-8">
+        <form class="login-register-form">
+            <div class="input-group">
+                <label for="username">
+                    Username
+                </label>
+                <input class="form-input" id="username" type="text" placeholder="Username">
             </div>
-        </div>
-    </body>
-</html>
+            <div class="input-group">
+                <label for="password">
+                    Password
+                </label>
+                <input class="form-input invalid" id="password" type="password" placeholder="******************">
+                <p class="warning-text">Please choose a password.</p>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="btn btn-primary" type="button">
+                    Sign In
+                </button>
+                <a href="#">
+                    Forgot Password?
+                </a>
+            </div>
+        </form>
+        <p class="text-center text-grey text-xs">
+            ©2017 Acme Corp. All rights reserved.
+        </p>
+    </div>
+
+    <div class="w-full max-w-xs mx-auto mt-8">
+        <form class="login-register-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input class="form-input" type="text" id="username" placeholder="Username">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input class="form-input" type="email" id="email" placeholder="email@email.com">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input class="form-input" type="password" id="password" placeholder="********">
+            </div>
+            <div class="input-group mb-6">
+                <label for="confirm-password">Confirm Password</label>
+                <input class="form-input" type="password" id="confirm-password" placeholder="********">
+            </div>
+            <div class="input-group text-center">
+                <div class="btn btn-primary">Register</div>
+            </div>
+            <div class="text-center">
+                <a href="">
+                    Already have an account?
+                </a>
+            </div>
+        </form>
+    </div>
+@endsection

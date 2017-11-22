@@ -1,0 +1,27 @@
+.btn {
+    @apply .px-4 .py-2 .rounded .shadow;
+}
+
+.btn-primary {
+    @apply .bg-blue .text-white;
+
+    &:hover {
+        @apply .bg-blue-dark;
+    }
+}
+
+.btn-normal {
+    @apply .bg-grey-lightest;
+
+    &:hover {
+        @apply .bg-grey-lighter;
+    }
+}
+
+.btn-danger {
+    @apply .bg-red-light .text-white;
+
+    &:hover {
+        @apply .bg-red;
+    }
+}

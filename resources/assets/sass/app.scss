@@ -1,9 +1,8 @@
+@tailwind preflight;
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Add component files here.
+@import 'buttons';
+@import 'elements';
+@import 'forms';
 
-// Variables
-@import "variables";
-
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@tailwind utilities;
